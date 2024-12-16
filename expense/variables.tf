@@ -11,6 +11,14 @@ variable "instance_type" {
   default = "t3.micro"
 }
 
+variable "common_tags" {
+  default = {
+    Project = "Expense"
+    Environment = "Dev"
+    Terraform = "true"
+  }
+}
+
 variable "instance_names" {
   type = list
   default = ["db", "backend", "frontend"]
